@@ -1,18 +1,23 @@
 package lk.ijse.dep.service;
 
 public interface Board {
-    int numOfRows = 5 ;
-    int numOfCols = 6 ;
+    int NUM_OF_ROWS = 5;
+    int NUM_OF_COLS = 6;
 
-    BoardUI getBoardUi();
+    BoardUI getBoardUI();
 
-    int findNextAvailableSpot(int col);
+    int findNextAvaliableSpot(int col);
 
     boolean isLegalMove(int col);
 
-    boolean existLegalMoves();
+    boolean exitsLegalMove();
 
-    void updateMove(int col, Piece move);
+    void updateMove(int col,Piece move);
+
+    Winner findWinner();
+
+    Piece[][] getPieces();
 
 
+    //  boolean existLegalMoves();
 }
